@@ -56,6 +56,6 @@ CREATE TABLE users
 
 -- insert into users (name, email, password, role, created)
 -- VALUES
--- ('Fabio','reg@pfcode.net', 'sWl7dH#`8~>4:ZA)_pGbUyVt(N\f[','admin', current_timestamp)
+-- ('Fabio','name@email.com', 'sWl7dH#`8~>4:ZA)_pGbUyVt(N\f[','admin', current_timestamp)
 
 
