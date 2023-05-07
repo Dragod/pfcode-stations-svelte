@@ -1,6 +1,6 @@
 import express from 'express'
 
-import { getStations, getStationsById, getFavorites, insertStation, addStation } from '../controllers/stationsController'
+import { getStations, getStationsById, getFavorites, addStation, addStationValidator } from '../controllers/stationsController'
 
 import dotenv from 'dotenv'
 
@@ -14,6 +14,6 @@ router.get('/stations/:id', getStationsById)
 
 router.get('/favorites', getFavorites)
 
-router.post('/stations', addStation)
+router.post('/stations',addStationValidator, addStation)
 
 export default router

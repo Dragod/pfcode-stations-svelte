@@ -2,13 +2,15 @@
 
   import axios from "axios"
 
+  export let baseUrl: string
+
   let stations: Array<any> = []
 
   let getStations = async () => {
 
     try {
 
-      const response = await axios.get("http://localhost:4041/api/stations")
+      const response = await axios.get(`${baseUrl}/stations`)
 
       stations = response.data
 
@@ -25,32 +27,6 @@
       return stations
 
     } catch (error) {
-
-      console.log(error)
-
-    }
-
-  }
-
-  let addStation = async () => {
-
-    try {
-
-        const response = await axios.post(
-
-        "http://localhost:4041/api/stations", 
-        {
-          name: 'test',
-          url: 'https://osdfisd.safd',
-          favorite: true
-        }
-
-      )
-
-      console.log(response.data)
-
-    }
-    catch (error) {
 
       console.log(error)
 

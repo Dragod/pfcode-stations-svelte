@@ -4,6 +4,8 @@
 
   import ListenStation from "./components/ListenStation.svelte"
 
+  import AddStation from "./components/AddStation.svelte";
+
   let selectedStation = null
 
   function handleStationClick(event:any) {
@@ -16,11 +18,15 @@
 
 <div class="flex flex-1 flex-row station">
 
-  <div class="flex flex-1"></div>
+  <div class="flex flex-1">
+
+    <AddStation baseUrl="http://localhost:4041/api" />
+
+  </div>
 
   <div class="flex flex-3">
 
-    <Stations on:click={handleStationClick} />
+    <Stations baseUrl="http://localhost:4041/api" on:click={handleStationClick} />
 
   </div>
 
