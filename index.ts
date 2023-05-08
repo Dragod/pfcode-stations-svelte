@@ -8,6 +8,8 @@ import path from 'path'
 
 import cors from 'cors'
 
+import favicon from 'serve-favicon'
+
 import apiRouter from './server/api'
 
 dotenv.config()
@@ -26,9 +28,13 @@ if (process.env.CORS == "true") {
 
 }
 
+app.disable('x-powered-by')
+
 app.use(morgan('dev'))
 
 app.use(express.json())
+
+app.use(favicon('favicon.ico'))
 
 app.use(express.urlencoded({ extended: true }))
 

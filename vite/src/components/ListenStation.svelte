@@ -107,6 +107,6 @@
 
 <audio on:change={station.url} on:ended={handleEnd}></audio>
 
-<button on:click={togglePlay}>{isPlaying ? `Pause` : `Play`}</button>
+<button type="button" on:click={togglePlay}>{isPlaying ? `Pause` : `Play`}</button>
 
 </div>
