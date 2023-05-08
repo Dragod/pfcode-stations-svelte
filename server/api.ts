@@ -16,8 +16,9 @@ router.get('/favorites', getFavorites)
 
 router.post('/stations',addStationValidator, addStation)
 
-router.put('/stations/:id', addStationValidator, addStation)
+//router.put('/stations/:id', addStationValidator, updateStation)
 
 router.delete('/stations/:name', deleteStationValidator, deleteStation)
+
 
 export default router
