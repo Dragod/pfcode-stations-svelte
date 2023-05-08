@@ -12,7 +12,7 @@ export let baseUrl: string;
 
 const handleSubmit = async (event: any) => {
 
-    event.preventDefault();
+    //event.preventDefault();
 
     try {
 
@@ -32,27 +32,42 @@ const handleSubmit = async (event: any) => {
         console.error(error);
 
     }
+
 };
 
 </script>
 
-<form class="flex flex-column" on:submit={handleSubmit}>
+<h2>Add Station</h2>
+
+<form class="flex flex-column ma-t-1" on:submit={handleSubmit}>
 
     <label class="flex flex-column" for="name">
-        Name
-        <input type="text" id="name" name="name" placeholder="Name" bind:value={name} />
+        <div class="flex flex-row">
+            <span class="flex flex-1">Name</span>
+            <small class="self-center">Required</small>
+        </div>
+        <input type="text" id="name" name="name" placeholder="Station name" bind:value={name} required />
     </label>
 
     <label class="flex flex-column" for="url">
-        Url
-        <input type="text" id="url" name="url" placeholder="URL" bind:value={url} />
+        <div class="flex flex-row">
+            <span class="flex flex-1">Url</span>
+            <small class="self-center">Required</small>
+        </div>
+        <input type="text" id="url" name="url" placeholder="Url: https://..." bind:value={url} required />
     </label>
 
-    <label class="flex flex-row" for="favorite">
-        <input type="checkbox" id="favorite" name="favorite" bind:checked={favorite} />
+    <label class="flex flex-row not-selectable pointer ma-t-1" for="favorite">
+        <input type="checkbox" id="favorite" class="pointer" name="favorite" placeholder="Favorite" bind:checked={favorite} />
         Favorite
     </label>
 
-    <button type="submit">Add Station</button>
+    <button class="ma-t-1" type="submit">Add Station</button>
 
 </form>
+
+<style lang="scss">
+.pointer { cursor: pointer;}
+.ma-t-1 { margin-top: 1rem; }
+.not-selectable { user-select: none; }
+</style>

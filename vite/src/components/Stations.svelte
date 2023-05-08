@@ -114,7 +114,7 @@
 
   {:else}
 
-    <div class="flex flex-1 flex-row justify-between station">
+    <div class="flex flex-1 flex-row justify-between station no-hover">
 
       <div class="flex flex-1 flex-column justify-center">
 
@@ -134,19 +134,19 @@
 <style lang="scss">
 
   .station{
-    background-color: #242424;
+    background-color: #060d13;
     color: #fff;
     padding: 1.2rem .5rem;
     opacity: 0.8;
     margin-right: 1rem;
     cursor: pointer;
-    border: 1px solid #202020;
+    border: 1px solid #293a56;
     width: calc(100% - 23px);
-    transition: all 0.6s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .station:nth-child(odd) {
-    background-color: rgba(36, 36, 36, 0.98);
+    background-color: rgb(11, 18, 28, 1)
 }
 
 .station {
@@ -165,11 +165,27 @@
 .station:hover {
 
   background-color: #fff;
-  color: #202020;
+  color: #060d13;
   padding: 1.2rem .5rem;
   opacity: 0.8;
   border: 1px solid #242424;
   width: calc(100% - 23px);
+}
+
+.station.no-hover {
+
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+  width: calc(100% - 28px);
+  h2 {
+    color: #fff;
+  }
+}
+.station.no-hover:hover {
+
+  background-color: #060d13;
+  color: #fff;
+
 }
 
 .stations-list {
@@ -181,20 +197,20 @@
   }
 
 .station-header {
-    background-color: #202020;
+    background-color: #060d13;
     color: #fff;
     margin-bottom: .5rem;
     padding: 1rem .5rem;
     opacity: 0.8;
     border-radius: 0.25rem;
     border: 1px solid #fff;
-    margin-right: calc(1rem + 6px);
+    margin-right: calc(1rem + 12px);
 }
 
 .filter-input {
 
-  margin-right: calc(1rem + 6px);
-
+  margin-right: calc(1rem + 12px);
+  border-color: #202020;
 }
 
 </style>

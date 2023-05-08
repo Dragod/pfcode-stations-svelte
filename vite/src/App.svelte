@@ -18,7 +18,7 @@
 
 <div class="flex flex-1 flex-row station">
 
-  <div class="flex flex-1">
+  <div class="flex flex-1 flex-column pa-all-1">
 
     <AddStation baseUrl="http://localhost:4041/api" />
 

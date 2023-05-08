@@ -24,7 +24,8 @@ body {
     height: 100%;
     display: flex;
     flex: 1;
-    background: #202020 url("./img/1136883.jpg");
+    //background: #060d13 url("./assets/abstract1.jpg") no-repeat center center fixed;
+    background: #060d13;
     background-position: inherit;
     background-size: cover;
     overflow: hidden;
@@ -60,7 +61,7 @@ input {
     padding: 0.7rem;
     margin-bottom: 0.5rem;
     border-radius: .25rem;
-    border: 1px solid rgb(242 235 235 / 80%);
+    border: 1px solid rgb(217 212 212 / 1);
 }
 
 input[type="checkbox"] {
