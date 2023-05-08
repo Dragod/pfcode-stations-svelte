@@ -62,7 +62,7 @@ const handleSubmit = async (event: any) => {
         Favorite
     </label>
 
-    <button class="ma-t-1" type="submit">Add Station</button>
+    <button class="ma-t-1" type="submit">Add</button>
 
 </form>
 

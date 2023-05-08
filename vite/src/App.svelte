@@ -6,6 +6,8 @@
 
   import AddStation from "./components/AddStation.svelte";
 
+  import DeleteStation from "./components/DeleteStation.svelte";
+
   let selectedStation = null
 
   function handleStationClick(event:any) {
@@ -21,6 +23,8 @@
   <div class="flex flex-1 flex-column pa-all-1">
 
     <AddStation baseUrl="http://localhost:4041/api" />
+
+    <DeleteStation baseUrl="http://localhost:4041/api" />
 
   </div>
 

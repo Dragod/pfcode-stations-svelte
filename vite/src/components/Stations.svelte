@@ -138,10 +138,9 @@
     color: #fff;
     padding: 1.2rem .5rem;
     opacity: 0.8;
-    margin-right: 1rem;
     cursor: pointer;
     border: 1px solid #293a56;
-    width: calc(100% - 23px);
+    width: 100%;
     transition: all 0.4s ease-in-out;
 }
 
@@ -169,14 +168,14 @@
   padding: 1.2rem .5rem;
   opacity: 0.8;
   border: 1px solid #242424;
-  width: calc(100% - 23px);
+  width: 100%;
 }
 
 .station.no-hover {
 
   border-top-left-radius: .25rem;
   border-top-right-radius: .25rem;
-  width: calc(100% - 28px);
+  width: 100%;
   h2 {
     color: #fff;
   }
@@ -204,12 +203,10 @@
     opacity: 0.8;
     border-radius: 0.25rem;
     border: 1px solid #fff;
-    margin-right: calc(1rem + 12px);
 }
 
 .filter-input {
 
-  margin-right: calc(1rem + 12px);
   border-color: #202020;
 }
 

@@ -104,14 +104,14 @@ export const deleteStation: StationController['deleteStation'] = async (req, res
 
     try {
 
-        const stationId = req.params.id;
+        const { name } = req.params;
 
         // First, check if the station exists
 
         const { data: station, error: checkError } = await supabase
             .from('stations')
-            .select()
-            .eq('id', stationId)
+            .select('id')
+            .eq('name', name)
             .single();
 
     if (checkError) {
@@ -133,7 +133,7 @@ export const deleteStation: StationController['deleteStation'] = async (req, res
     const { error: deleteError } = await supabase
         .from('stations')
         .delete()
-        .eq('id', stationId);
+        .eq('id', station.id);
 
     if (deleteError) {
 
@@ -155,3 +155,7 @@ export const deleteStation: StationController['deleteStation'] = async (req, res
     }
 
 };
+
+export const deleteStationValidator = [
+    body('name').not().isEmpty().withMessage('Name is required').isString().withMessage('Name should be a string').isLength({ min: 3 }).withMessage('Name should be at least 3 characters long'),
+];
